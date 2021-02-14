@@ -41,19 +41,17 @@ searchArea.addEventListener("keypress", function(event) {
         searchBtn.click();
     }
 });
-
-
 let slideIndex = 0;
 const selectItem = (event, img) => {
     let element = event.target;
     element.classList.toggle('added');
 
     let item = sliders.indexOf(img);
-    if (item === -1) {
+    if (item == -1) {
         sliders.push(img);
     }
 }
-var timer
+let timer
 const createSlider = () => {
     // check slider image length
     if (sliders.length < 2) {
@@ -76,7 +74,8 @@ const createSlider = () => {
     const duration = document.getElementById('duration').value || 1000;
     if (duration < -1) {
         alert("the number can't be negative")
-        return
+        return;
+
     }
     if (duration > 1) {
         sliders.forEach(slide => {
@@ -139,6 +138,11 @@ const toggleSpinner = (show) => {
         spinner.classList.remove('d-none');
     } else {
         spinner.classList.add('d-none');
+    }
+    if (show) {
+        gallery.classList.add('d-none');
+    } else {
+        gallery.classList.remove('d-none');
     }
 
 }
