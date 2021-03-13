@@ -1,2 +1,5 @@
-# live site
-https://sahilimrose.github.io/fancy-slider/index.html
+# fancy-image-slider
+assignment-project-6
+fahim-ahammed
+
+# Live site: https://fahimahammed.github.io/fancy-image-slider/ 
